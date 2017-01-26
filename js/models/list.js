@@ -17,15 +17,7 @@ List.prototype.optionEl = function(){
   return `<option value="${this.id}">${this.title}</option>`
 }
 
-// Task.prototype.build = function(){
-//   $("ul").append(this.liEl())
-// }
-
 List.prototype.build = function(){
   $("#lists").append(this.listEl())
   $("#select_list").append(this.optionEl())
 }
-
-// '<div class="list"><h2><button class="destroy-list">x</button> Jon's List</h2><ul id="list-0" data-id="data-0"></ul></div>'
-//
-// '<div class="list"><h2><button class="destroy-list">x</button> Jon's List</h2><ul id="list-0" data-id="0"></ul></div>'.

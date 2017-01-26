@@ -13,9 +13,13 @@ ListsController.prototype.init = function(){
   this.$addListForm.submit((event) => {
     event.preventDefault()
     this.$addTaskForm.show()
-    // this.addEventListener("click", this.build)
-    // this.build()
+
     var list = new List(this.$listTitleInput.val())
     list.build()
+
+    // DELETE
+    $('.destroy-list').click(function () {
+      this.parentElement.parentElement.remove()
+    })
   })
 }
